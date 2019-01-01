@@ -1,3 +1,14 @@
-<p>
-  home works!
-</p>
+<h1>Home</h1>
+<ul *ngIf="users" class="list-group">
+  <li *ngFor="let user of users.data" class="list-group-item">
+    <div class="card flex-row flex-wrap">
+      <div class="card-header border-0">
+        <img class="rounded-circle" [src]="user.avatar" />
+      </div>
+      <div class="card-block px-2 my-auto">
+        <h4 class="card-title">Name</h4>
+        <p class="card-text">{{ user.first_name }} {{ user.last_name }}</p>
+      </div>
+    </div>
+  </li>
+</ul>
